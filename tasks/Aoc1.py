@@ -19,7 +19,7 @@ class Aoc1:
 
     def _sanitize_input(self, input):
         ''' \'1000/n2000/n/n3000\' -> [[1000,2000],[3000]] '''
-        return [list(map(int, item.split('\n'))) for item in input.split("\n\n")]
+        return (map(int, item.split('\n')) for item in input.split("\n\n"))
 
 def main():
     solution = Aoc1(get_data())
